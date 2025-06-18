@@ -1,8 +1,7 @@
 import axios from 'axios';
 
-const apiUrl = MyApiUrl
-//axios.defaults.baseURL = apiUrl;
-axios.defaults.baseURL = process.env.REACT_APP_API_URL;
+const apiUrl = process.env.REACT_APP_API_URL
+axios.defaults.baseURL = apiUrl;
 
 // export const configAxios = () => {
 
