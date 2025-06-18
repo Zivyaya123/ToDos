@@ -128,7 +128,7 @@ app.MapDelete("/items/{id}", async (int Id, ToDoDbContext Db) =>
     return Results.NotFound();
 });
 
-if (app.Environment.IsDevelopment())
+//if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
@@ -150,5 +150,5 @@ app.UseCors(MyAllowSpecificOrigins);
 app.UseAuthorization();
 
 app.MapControllers();
-
+app.MapGet("/", () => "App Is Running!");
 app.Run();
